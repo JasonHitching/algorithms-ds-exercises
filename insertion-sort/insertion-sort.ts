@@ -14,7 +14,8 @@ function insertionSort(arr: number[]) {
   // Loop over the parameter passed array, starting at index [1]
   for (let i = 1; i < arr.length; i++) {
     let j = i;
-    // While loop for checking all proceeding indexes
+    /** While loop for checking all preceeding 
+    indecies until correct position found */
     while (j > 0 && arr[j - 1] > arr[j]) {
       const temp = arr[j - 1];
       arr[j - 1] = arr[j];
@@ -24,7 +25,7 @@ function insertionSort(arr: number[]) {
   }
 }
 
-let nums: number[] = [10, 3, 2, 5];
+let nums: number[] = [10, 3, 2, 5]; // Initial input array
 insertionSort(nums);
 
-console.log(nums);
+console.log(nums); // Console log resulting sorted array
